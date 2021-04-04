@@ -1,27 +1,29 @@
-# AngularProtractorTest
+#Setup
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
+#Use npm to install Protractor globally with:
 
-## Development server
+npm install -g protractor
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This will install two command line tools, protractor and webdriver-manager. Try running protractor --version to make sure it's working.
 
-## Code scaffolding
+The webdriver-manager is a helper tool to easily get an instance of a Selenium Server running. Use it to download the necessary binaries with:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+webdriver-manager update
 
-## Build
+#Now start up a server with:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+webdriver-manager start
 
-## Running unit tests
+This will start up a Selenium Server and will output a bunch of info logs. Your Protractor test will send requests to this server to control a local browser. You can see information about the status of the server at http://localhost:4444/wd/hub.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#Install the needed dependencies
+npm install --save-dev @types/{chai,cucumber} chai cucumber protractor-cucumber-framework
 
-## Running end-to-end tests
+#Chai
+Cucumber is a testing framework which doesn't come with an assertion library like Jasmine does, so we need to install one–chai in this article.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#To Run
+ng e2e
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#More details:
+https://www.amadousall.com/angular-e2e-with-cucumber/
