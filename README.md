@@ -23,3 +23,6 @@ We’re going to want to install webdriver-manager, cucumber, protractor, and it
 npm init (if you haven’t already)
 
 npm install --save-dev webdriver-manager protractor cucumber protractor-cucumber-framework
+
+More details:
+https://medium.com/osldev-blog/tutorial-creating-maintainable-e2e-tests-with-protractor-and-cucumber-513435a71db3
