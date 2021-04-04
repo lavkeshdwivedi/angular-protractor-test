@@ -16,13 +16,17 @@ webdriver-manager start
 
 This will start up a Selenium Server and will output a bunch of info logs. Your Protractor test will send requests to this server to control a local browser. You can see information about the status of the server at http://localhost:4444/wd/hub.
 
-Configuring Protractor
+Install the needed dependencies
+npm install --save-dev @types/{chai,cucumber} chai cucumber protractor-cucumber-framework
 
-We’re going to want to install webdriver-manager, cucumber, protractor, and its cucumber plugin.
+Chai
+Cucumber is a testing framework which doesn't come with an assertion library like Jasmine does, so we need to install one–chai in this article.
 
-npm init (if you haven’t already)
+Run
+ng e2e
 
-npm install --save-dev webdriver-manager protractor cucumber protractor-cucumber-framework
+
+
 
 More details:
-https://medium.com/osldev-blog/tutorial-creating-maintainable-e2e-tests-with-protractor-and-cucumber-513435a71db3
+https://www.amadousall.com/angular-e2e-with-cucumber/
