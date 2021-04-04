@@ -27,6 +27,5 @@ ng e2e
 
 
 
-
 More details:
 https://www.amadousall.com/angular-e2e-with-cucumber/
